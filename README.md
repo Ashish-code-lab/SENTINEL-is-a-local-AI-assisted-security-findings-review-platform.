@@ -31,7 +31,8 @@ then select **Start Security Scan** to open the review workspace at `/review`.
 flowchart TD
     A["User / Browser"] --> B["Frontend: HTML, CSS, JavaScript"]
     B -->|"POST /api/reviews"| C["FastAPI Web Server"]
-<img width="458" height="614" alt="image" src="https://github.com/user-attachments/assets/89d81454-9b30-4fad-92fe-70a313a4d473" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ae003ebb-5b70-4236-bc43-a03755a9d70b" />
+
 
 If Ollama is not running or the model is unavailable, the review endpoint
 returns a clear service error and the interface lets you retry after fixing it.
