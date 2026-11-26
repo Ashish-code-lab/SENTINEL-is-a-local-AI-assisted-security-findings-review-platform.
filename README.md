@@ -28,6 +28,8 @@ python -m uvicorn app:app --reload
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000) for the product overview,
 then select **Start Security Scan** to open the review workspace at `/review`.
 
+
+
 flowchart TD
     A["User / Browser"] --> B["Frontend: HTML, CSS, JavaScript"]
     B -->|"POST /api/reviews"| C["FastAPI Web Server"]
