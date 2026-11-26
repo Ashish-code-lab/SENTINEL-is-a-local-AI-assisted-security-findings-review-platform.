@@ -31,35 +31,8 @@ then select **Start Security Scan** to open the review workspace at `/review`.
 flowchart TD
     A["User / Browser"] --> B["Frontend: HTML, CSS, JavaScript"]
     B -->|"POST /api/reviews"| C["FastAPI Web Server"]
+<img width="458" height="614" alt="image" src="https://github.com/user-attachments/assets/89d81454-9b30-4fad-92fe-70a313a4d473" />
 
-    C --> D["Review Controller"]
-    D --> E["Input Validation & Preprocessing"]
-    E --> F["Multi-Agent Orchestrator"]
-
-    F --> G["Red Agent"]
-    F --> H["Blue Agent"]
-
-    G -->|"Threat Analysis"| I["Ollama Local LLM Engine"]
-    H -->|"Defensive Analysis"| I
-
-    I --> J["Llama 3.2:3B"]
-
-    J --> G
-    J --> H
-
-    G --> K["Red Agent Report"]
-    H --> L["Blue Agent Report"]
-
-    K --> M["Judge Agent"]
-    L --> M
-
-    M -->|"Compare & Evaluate"| I
-    I --> M
-
-    M --> N["Combined Security Report"]
-    N --> O["JSON Response"]
-    O --> B
-    B --> P["Display Results to User"]
 If Ollama is not running or the model is unavailable, the review endpoint
 returns a clear service error and the interface lets you retry after fixing it.
 
